@@ -702,7 +702,7 @@
   //#define BLTOUCH_HS_MODE
 
   // Safety: Enable voltage mode settings in the LCD menu.
-  //#define BLTOUCH_LCD_VOLTAGE_MENU
+  #define BLTOUCH_LCD_VOLTAGE_MENU
 
 #endif // BLTOUCH
 
@@ -899,7 +899,7 @@
 
   // Define the pin to read during calibration
   #ifndef CALIBRATION_PIN
-    #define CALIBRATION_PIN -1            // Define here to override the default pin
+    //#define CALIBRATION_PIN -1            // Define here to override the default pin
     #define CALIBRATION_PIN_INVERTING false // Set to true to invert the custom pin
     //#define CALIBRATION_PIN_PULLDOWN
     #define CALIBRATION_PIN_PULLUP
