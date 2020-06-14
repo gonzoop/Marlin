@@ -481,8 +481,8 @@
 #define PID_K1 0.95      // Smoothing factor within any PID loop
 
 #if ENABLED(PIDTEMP)
-  //#define PID_EDIT_MENU         // Add PID editing to the "Advanced Settings" menu. (~700 bytes of PROGMEM)
-  //#define PID_AUTOTUNE_MENU     // Add PID auto-tuning to the "Advanced Settings" menu. (~250 bytes of PROGMEM)
+  #define PID_EDIT_MENU         // Add PID editing to the "Advanced Settings" menu. (~700 bytes of PROGMEM)
+  #define PID_AUTOTUNE_MENU     // Add PID auto-tuning to the "Advanced Settings" menu. (~250 bytes of PROGMEM)
   //#define PID_PARAMS_PER_HOTEND // Uses separate PID parameters for each extruder (useful for mismatched extruders)
                                   // Set/get with gcode: M301 E[extruder number, 0-2]
 
@@ -687,22 +687,22 @@
  *          TMC5130, TMC5130_STANDALONE, TMC5160, TMC5160_STANDALONE
  * :['A4988', 'A5984', 'DRV8825', 'LV8729', 'L6470', 'L6474', 'POWERSTEP01', 'TB6560', 'TB6600', 'TMC2100', 'TMC2130', 'TMC2130_STANDALONE', 'TMC2160', 'TMC2160_STANDALONE', 'TMC2208', 'TMC2208_STANDALONE', 'TMC2209', 'TMC2209_STANDALONE', 'TMC26X', 'TMC26X_STANDALONE', 'TMC2660', 'TMC2660_STANDALONE', 'TMC5130', 'TMC5130_STANDALONE', 'TMC5160', 'TMC5160_STANDALONE']
  */
-//#define X_DRIVER_TYPE  TMC2208
-//#define Y_DRIVER_TYPE  TMC2208
-//#define Z_DRIVER_TYPE  TMC2208
-//#define X2_DRIVER_TYPE TMC2208
-//#define Y2_DRIVER_TYPE TMC2208
-//#define Z2_DRIVER_TYPE TMC2208
-//#define Z3_DRIVER_TYPE TMC2208
-//#define Z4_DRIVER_TYPE TMC2208
-//#define E0_DRIVER_TYPE TMC2208
-//#define E1_DRIVER_TYPE TMC2208
-//#define E2_DRIVER_TYPE TMC2208
-//#define E3_DRIVER_TYPE TMC2208
-//#define E4_DRIVER_TYPE TMC2208
-//#define E5_DRIVER_TYPE TMC2208
-//#define E6_DRIVER_TYPE TMC2208
-//#define E7_DRIVER_TYPE TMC2208
+#define X_DRIVER_TYPE  TMC2208
+#define Y_DRIVER_TYPE  TMC2208
+#define Z_DRIVER_TYPE  TMC2208
+#define X2_DRIVER_TYPE TMC2208
+#define Y2_DRIVER_TYPE TMC2208
+#define Z2_DRIVER_TYPE TMC2208
+#define Z3_DRIVER_TYPE TMC2208
+#define Z4_DRIVER_TYPE TMC2208
+#define E0_DRIVER_TYPE TMC2208
+#define E1_DRIVER_TYPE TMC2208
+#define E2_DRIVER_TYPE TMC2208
+#define E3_DRIVER_TYPE TMC2208
+#define E4_DRIVER_TYPE TMC2208
+#define E5_DRIVER_TYPE TMC2208
+#define E6_DRIVER_TYPE TMC2208
+#define E7_DRIVER_TYPE TMC2208
 
 // Enable this feature if all enabled endstop pins are interrupt-capable.
 // This will remove the need to poll the interrupt pins, saving many CPU cycles.
@@ -976,7 +976,7 @@
  *
  * Specify a Probe position as { X, Y, Z }
  */
-#define NOZZLE_TO_PROBE_OFFSET { -43, -5, 0 }
+#define NOZZLE_TO_PROBE_OFFSET { -43, -5, -4.95 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
